@@ -1,0 +1,25 @@
+{
+    "name": "hardhat-005",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "add-packages": "yarn add --dev hardhat @nomiclabs/hardhat-ethers @nomiclabs/hardhat-waffle  @typechain/hardhat @types/chai @types/mocha @types/node chai dotenv ethereum-waffle ethers ts-node typechain typescript"
+    },
+    "devDependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.0.5",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "@typechain/hardhat": "^5.0.0",
+        "@types/chai": "^4.3.0",
+        "@types/mocha": "^9.1.0",
+        "@types/node": "^17.0.21",
+        "chai": "^4.3.6",
+        "dotenv": "^16.0.0",
+        "ethereum-waffle": "^4.0.0-alpha.0",
+        "ethers": "^5.6.1",
+        "hardhat": "^2.9.1",
+        "ts-node": "^10.7.0",
+        "typechain": "^7.0.1",
+        "typescript": "^4.6.2"
+    }
+}
