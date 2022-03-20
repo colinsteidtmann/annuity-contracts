@@ -1,5 +1,25 @@
 import { ethers } from "hardhat";
 
+const ANNUITY = "Annuity";
+const TOKEN = "Token";
+
+async function deployContract(name: string) {
+    console.log("\nDeploying contract: " + name + " -----");
+    const ContractFactory = await ethers.getContractFactory(name);
+
+    let ContractInstance;
+    if (name == ANNUITY) {
+        ContractInstance = await ContractFactory.deploy({ value: 10 }); // deploy contract with 10 wei
+    } else {
+        ContractInstance = await ContractFactory.deploy();
+    }
+
+    const contractAddress = ContractInstance.address;
+
+    console.log("Deployed %s contract at address: %s", name, contractAddress);
+    return;
+}
+
 async function main() {
     const [deployer] = await ethers.getSigners();
 
@@ -7,10 +27,8 @@ async function main() {
 
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
-    const TokenFactory = await ethers.getContractFactory("Token");
-    const HardhatToken = await TokenFactory.deploy();
-
-    console.log("HardhatToken address:%s\n", HardhatToken.address);
+    await deployContract(TOKEN);
+    await deployContract(ANNUITY);
 }
 
 main()
