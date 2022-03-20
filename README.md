@@ -40,16 +40,27 @@ npx hardhat
 ## Folder structure
 .
 | ---  ...
+
 | --- contracts
+
 | --- --- Annuity.sol (main contract) 
+
 | --- --- Token.sol
+
 | --- scripts
+
 | --- --- deploy.ts
+
 | --- src (holds typechain types)
+
 | --- test
+
 | --- --- Annuity.ts (main test file)
+
 | --- --- Token.ts
+
 | --- .env.example
+
 | --- ...
 
 ## TODO
